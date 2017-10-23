@@ -2,6 +2,7 @@
     "name": "HashUserId",
     "description": "Anonymize UserId using salt and sha1 hash.",
     "version": "1.0.0",
+    "license": "GPL v3+",
     "theme": false,
     "require": {
         "piwik": ">=3.0.0,<4.0.0"
@@ -12,7 +13,10 @@
             "email": "iMarkus@users.noreply.github.com",
             "homepage": "https://github.com/iMarkus"
         }
-    ],    
+    ],
+    "support": {        
+        "issues": "https://github.com/iMarkus/Piwik-HashUserId/issues"
+    },
     "license": "GPL v3+",
     "keywords": ["Anonymize", "Hash", "UserId"]
 }
