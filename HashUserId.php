@@ -18,8 +18,8 @@ class HashUserId extends \Piwik\Plugin
 {
     public function activate()
     {
-		$logger = StaticContainer::get('Psr\Log\LoggerInterface');
-		$logger->info('Plugin HashUserId activated');
+	$logger = StaticContainer::get('Psr\Log\LoggerInterface');
+	$logger->info('Plugin HashUserId activated');
     }
 
     public function deactivate()
