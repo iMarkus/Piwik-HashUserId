@@ -1,7 +1,7 @@
 {
     "name": "HashUserId",
     "description": "Anonymize UserId using salt and sha1 hash.",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "license": "GPL v3+",
     "theme": false,
     "require": {
