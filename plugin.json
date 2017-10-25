@@ -1,7 +1,7 @@
 {
     "name": "HashUserId",
 	"description": "Anonymize UserId using salt and sha1 hash.",
-	"version": "0.3.0",
+	"version": "0.4.0",
     "license": "GPL v3+",
     "theme": false,
 	"homepage": "https://github.com/iMarkus/Piwik-HashUserId",

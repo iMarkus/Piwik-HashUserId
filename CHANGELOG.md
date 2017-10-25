@@ -1,5 +1,8 @@
 ## Changelog
 
+__0.4.0__
+* Added API
+
 __0.3.0__
 * Added screenshot
 
