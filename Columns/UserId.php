@@ -43,13 +43,16 @@ class UserId extends VisitDimension
      * @return mixed|false
      */
     public function onNewVisit(Request $request, Visitor $visitor, $action)
-    {	
-	$username = $visitor->getVisitorColumn('user_id');
-	$salt = Config::getInstance()->General['salt'];
-        $usernamehash = substr( sha1( $salt.$username ), 0, 16);
-        $visitor->setVisitorColumn('user_id', $usernamehash);
-
-	return $usernamehash;
+    {
+      $uid = $visitor->getVisitorColumn('user_id');
+      if(!empty($uid))
+      {
+        $salt = Config::getInstance()->General['salt'];
+        $hash = substr(sha1($salt.$uid), 0, 16);
+        $visitor->setVisitorColumn('user_id', $hash);
+        return $hash;
+      }
+      return $uid;
     }
 
     /**
@@ -61,11 +64,14 @@ class UserId extends VisitDimension
      */
     public function onExistingVisit(Request $request, Visitor $visitor, $action)
     {
-	$username = $visitor->getVisitorColumn('user_id');
-	$salt = Config::getInstance()->General['salt'];
-	$usernamehash = substr( sha1( $salt.$username ), 0, 16);
-	$visitor->setVisitorColumn('user_id', $usernamehash);
-
-        return $usernamehash;
+      $uid = $visitor->getVisitorColumn('user_id');
+      if(!empty($uid))
+      {
+        $salt = Config::getInstance()->General['salt'];
+        $hash = substr(sha1($salt.$uid), 0, 16);
+        $visitor->setVisitorColumn('user_id', $hash);
+        return $hash;
+      }
+      return $uid;
     }
 }
